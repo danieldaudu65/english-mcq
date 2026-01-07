@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+
+/* Google Font */
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-[#05070A] text-white antialiased;
+  }
+
+  html.light body {
+    @apply bg-white text-black;
+  }
+}
+
+
+@keyframes float3D {
+  0%, 100% {
+    transform: translateY(0) translateZ(0);
+  }
+  50% {
+    transform: translateY(-18px) translateZ(20px);
+  }
+}
+
+@keyframes groundShadow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(0.75);
+    opacity: 0.18;
+  }
+}
+
+.animate-float3D {
+  animation: float3D 5s ease-in-out infinite;
+}
+
+.animate-groundShadow {
+  animation: groundShadow 5s ease-in-out infinite;
+}
